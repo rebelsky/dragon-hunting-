@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
             if (w.dragonFound()) {
                 cout << "The dragon WAS found." << endl;
             } else {
-                cout << "The dragon WAS NOT found. << endl";
+                cout << "The dragon WAS NOT found." << endl;
             }
         } catch (out_of_range &e) {
             cerr << "The hunting algorithm failed with an out-of-range index: "
