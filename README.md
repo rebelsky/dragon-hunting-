@@ -11,7 +11,8 @@ the various `huntXX.cpp` files.
 
     I'd recommend that you put your algorithm in a separate file and
     copy it over to `hunt.cpp`. That way, you can easily switch algorithms
-    without deleting important work.
+    without deleting important work. (Those of you comfortable with Linux
+    can also use soft links.)
 
     Here's one such algorithm, from `hunt00.cpp`.
 
