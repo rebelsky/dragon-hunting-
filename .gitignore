@@ -17,5 +17,8 @@
 trace-hunt
 test-hunt
 
+# A sample file
+hunt.cpp
+
 # Some private stuff
 private
