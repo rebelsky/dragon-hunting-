@@ -88,7 +88,6 @@ FarmState World::get(int i) {
 
     // If we're being verbose
     if (verbose) {
-        note("d = " + to_string(d));
         // Show the state of the world
         printState();
         // Show the knight and indices
