@@ -33,7 +33,7 @@ using namespace std;
 // | Main |
 // +------+
 
-/* 
+/*
  * Parse the command line and show how the hunt works. The command
  * line should contain a positive integer, n, representing the number
  * of farms, and a non-negative integer, k, representing the number
@@ -65,32 +65,35 @@ int main(int argc, char* argv[]) {
         exit(1);
     } // try/catch
 
-    try { 
+    try {
         // Set up the world
         World w = World(n, k);
         w.reportActivity();
 
         // Run the algorithm
-        try { 
+        try {
             bool found = huntDragon(w);
             if (found) {
-                cout << "The algorithm claims it found the dragon.\n";
+                cout << "The algorithm claims it found the dragon." << endl;
             } else {
-                cout << "The algorithm could not find the dragon.\n";
+                cout << "The algorithm could not find the dragon." << endl;
             } // if/else
             if (w.dragonFound()) {
-                cout << "The dragon WAS found.\n";
+                cout << "The dragon WAS found." << endl;
             } else {
-                cout << "The dragon WAS NOT found.\n";
+                cout << "The dragon WAS NOT found. << endl";
             }
         } catch (out_of_range &e) {
             cerr << "The hunting algorithm failed with an out-of-range index: "
                  << e.what()
-                 << "\n";
-        } catch (string &s) {
-            cerr << "The hunting algorithm failed because " << s << "\n";
+                 << endl;
+        } catch (runtime_error &e) {
+            cerr << "The hunting algorithm failed because "
+                 << e.what()
+                 << endl;
         } // try/catch
-    
+        cout << flush;
+
         return 0;
 
     } catch (out_of_range &e) {
